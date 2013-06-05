@@ -1,8 +1,0 @@
-//
-// Prefix header for all source files of the 'WordReverser' target in the 'WordReverser' project
-//
-
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-    #import <UIKit/UIKit.h>
-#endif

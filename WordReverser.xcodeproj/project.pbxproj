@@ -7,114 +7,169 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* WordReverserAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* WordReverserAppDelegate.m */; };
-		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		DECCA19212A9B03E00A6AA78 /* README in Resources */ = {isa = PBXBuildFile; fileRef = DECCA19112A9B03E00A6AA78 /* README */; };
-		DED0C63C175EDA5700F63C44 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DED0C63B175EDA5700F63C44 /* Default-568h@2x.png */; };
+		DED30BCC175EDE91007A9BCE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED30BCB175EDE91007A9BCE /* UIKit.framework */; };
+		DED30BCE175EDE91007A9BCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED30BCD175EDE91007A9BCE /* Foundation.framework */; };
+		DED30BD0175EDE91007A9BCE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED30BCF175EDE91007A9BCE /* CoreGraphics.framework */; };
+		DED30BD6175EDE91007A9BCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED30BD4175EDE91007A9BCE /* InfoPlist.strings */; };
+		DED30BD8175EDE91007A9BCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DED30BD7175EDE91007A9BCE /* main.m */; };
+		DED30BDC175EDE91007A9BCE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DED30BDB175EDE91007A9BCE /* AppDelegate.m */; };
+		DED30BDE175EDE91007A9BCE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DED30BDD175EDE91007A9BCE /* Default.png */; };
+		DED30BE0175EDE91007A9BCE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DED30BDF175EDE91007A9BCE /* Default@2x.png */; };
+		DED30BE2175EDE91007A9BCE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DED30BE1175EDE91007A9BCE /* Default-568h@2x.png */; };
+		DED30BE5175EDE91007A9BCE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED30BE3175EDE91007A9BCE /* MainStoryboard.storyboard */; };
+		DED30BE8175EDE91007A9BCE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED30BE7175EDE91007A9BCE /* ViewController.m */; };
+		DED30BF0175EDE91007A9BCE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED30BEF175EDE91007A9BCE /* SenTestingKit.framework */; };
+		DED30BF1175EDE91007A9BCE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED30BCB175EDE91007A9BCE /* UIKit.framework */; };
+		DED30BF2175EDE91007A9BCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED30BCD175EDE91007A9BCE /* Foundation.framework */; };
+		DED30BFA175EDE91007A9BCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED30BF8175EDE91007A9BCE /* InfoPlist.strings */; };
+		DED30BFD175EDE91007A9BCE /* WordReverserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DED30BFC175EDE91007A9BCE /* WordReverserTests.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DED30BF3175EDE91007A9BCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DED30BC0175EDE91007A9BCE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DED30BC7175EDE91007A9BCE;
+			remoteInfo = WordReverser;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* WordReverserAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordReverserAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* WordReverserAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordReverserAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* WordReverser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordReverser.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* WordReverser_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordReverser_Prefix.pch; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* WordReverser-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WordReverser-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		DECCA19112A9B03E00A6AA78 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		DED0C63B175EDA5700F63C44 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DED30BC8175EDE91007A9BCE /* WordReverser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordReverser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED30BCB175EDE91007A9BCE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DED30BCD175EDE91007A9BCE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DED30BCF175EDE91007A9BCE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DED30BD3175EDE91007A9BCE /* WordReverser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WordReverser-Info.plist"; sourceTree = "<group>"; };
+		DED30BD5175EDE91007A9BCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DED30BD7175EDE91007A9BCE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DED30BD9175EDE91007A9BCE /* WordReverser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WordReverser-Prefix.pch"; sourceTree = "<group>"; };
+		DED30BDA175EDE91007A9BCE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DED30BDB175EDE91007A9BCE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DED30BDD175EDE91007A9BCE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DED30BDF175EDE91007A9BCE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DED30BE1175EDE91007A9BCE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DED30BE4175EDE91007A9BCE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		DED30BE6175EDE91007A9BCE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DED30BE7175EDE91007A9BCE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DED30BEE175EDE91007A9BCE /* WordReverserTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordReverserTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED30BEF175EDE91007A9BCE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DED30BF7175EDE91007A9BCE /* WordReverserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WordReverserTests-Info.plist"; sourceTree = "<group>"; };
+		DED30BF9175EDE91007A9BCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DED30BFB175EDE91007A9BCE /* WordReverserTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordReverserTests.h; sourceTree = "<group>"; };
+		DED30BFC175EDE91007A9BCE /* WordReverserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordReverserTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+		DED30BC5175EDE91007A9BCE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
-				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				DED30BCC175EDE91007A9BCE /* UIKit.framework in Frameworks */,
+				DED30BCE175EDE91007A9BCE /* Foundation.framework in Frameworks */,
+				DED30BD0175EDE91007A9BCE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED30BEA175EDE91007A9BCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED30BF0175EDE91007A9BCE /* SenTestingKit.framework in Frameworks */,
+				DED30BF1175EDE91007A9BCE /* UIKit.framework in Frameworks */,
+				DED30BF2175EDE91007A9BCE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
+		DED30BBF175EDE91007A9BCE = {
 			isa = PBXGroup;
 			children = (
-				1D3623240D0F684500981E51 /* WordReverserAppDelegate.h */,
-				1D3623250D0F684500981E51 /* WordReverserAppDelegate.m */,
+				DED30BD1175EDE91007A9BCE /* WordReverser */,
+				DED30BF5175EDE91007A9BCE /* WordReverserTests */,
+				DED30BCA175EDE91007A9BCE /* Frameworks */,
+				DED30BC9175EDE91007A9BCE /* Products */,
 			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
-		19C28FACFE9D520D11CA2CBB /* Products */ = {
+		DED30BC9175EDE91007A9BCE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* WordReverser.app */,
+				DED30BC8175EDE91007A9BCE /* WordReverser.app */,
+				DED30BEE175EDE91007A9BCE /* WordReverserTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+		DED30BCA175EDE91007A9BCE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DED0C63B175EDA5700F63C44 /* Default-568h@2x.png */,
-				DECCA19112A9B03E00A6AA78 /* README */,
-				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
-				29B97323FDCFA39411CA2CEA /* Frameworks */,
-				19C28FACFE9D520D11CA2CBB /* Products */,
-			);
-			name = CustomTemplate;
-			sourceTree = "<group>";
-		};
-		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				32CA4F630368D1EE00C91783 /* WordReverser_Prefix.pch */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
-			);
-			name = "Other Sources";
-			sourceTree = "<group>";
-		};
-		29B97317FDCFA39411CA2CEA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				8D1107310486CEB800E47090 /* WordReverser-Info.plist */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
-				1D30AB110D05D00D00671497 /* Foundation.framework */,
-				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				DED30BCB175EDE91007A9BCE /* UIKit.framework */,
+				DED30BCD175EDE91007A9BCE /* Foundation.framework */,
+				DED30BCF175EDE91007A9BCE /* CoreGraphics.framework */,
+				DED30BEF175EDE91007A9BCE /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DED30BD1175EDE91007A9BCE /* WordReverser */ = {
+			isa = PBXGroup;
+			children = (
+				DED30BDA175EDE91007A9BCE /* AppDelegate.h */,
+				DED30BDB175EDE91007A9BCE /* AppDelegate.m */,
+				DED30BE3175EDE91007A9BCE /* MainStoryboard.storyboard */,
+				DED30BE6175EDE91007A9BCE /* ViewController.h */,
+				DED30BE7175EDE91007A9BCE /* ViewController.m */,
+				DED30BD2175EDE91007A9BCE /* Supporting Files */,
+			);
+			path = WordReverser;
+			sourceTree = "<group>";
+		};
+		DED30BD2175EDE91007A9BCE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DED30BD3175EDE91007A9BCE /* WordReverser-Info.plist */,
+				DED30BD4175EDE91007A9BCE /* InfoPlist.strings */,
+				DED30BD7175EDE91007A9BCE /* main.m */,
+				DED30BD9175EDE91007A9BCE /* WordReverser-Prefix.pch */,
+				DED30BDD175EDE91007A9BCE /* Default.png */,
+				DED30BDF175EDE91007A9BCE /* Default@2x.png */,
+				DED30BE1175EDE91007A9BCE /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DED30BF5175EDE91007A9BCE /* WordReverserTests */ = {
+			isa = PBXGroup;
+			children = (
+				DED30BFB175EDE91007A9BCE /* WordReverserTests.h */,
+				DED30BFC175EDE91007A9BCE /* WordReverserTests.m */,
+				DED30BF6175EDE91007A9BCE /* Supporting Files */,
+			);
+			path = WordReverserTests;
+			sourceTree = "<group>";
+		};
+		DED30BF6175EDE91007A9BCE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DED30BF7175EDE91007A9BCE /* WordReverserTests-Info.plist */,
+				DED30BF8175EDE91007A9BCE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* WordReverser */ = {
+		DED30BC7175EDE91007A9BCE /* WordReverser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "WordReverser" */;
+			buildConfigurationList = DED30C00175EDE91007A9BCE /* Build configuration list for PBXNativeTarget "WordReverser" */;
 			buildPhases = (
-				1D60588D0D05DD3D006BFB54 /* Resources */,
-				1D60588E0D05DD3D006BFB54 /* Sources */,
-				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				DED30BC4175EDE91007A9BCE /* Sources */,
+				DED30BC5175EDE91007A9BCE /* Frameworks */,
+				DED30BC6175EDE91007A9BCE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -122,138 +177,292 @@
 			);
 			name = WordReverser;
 			productName = WordReverser;
-			productReference = 1D6058910D05DD3D006BFB54 /* WordReverser.app */;
+			productReference = DED30BC8175EDE91007A9BCE /* WordReverser.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DED30BED175EDE91007A9BCE /* WordReverserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DED30C03175EDE91007A9BCE /* Build configuration list for PBXNativeTarget "WordReverserTests" */;
+			buildPhases = (
+				DED30BE9175EDE91007A9BCE /* Sources */,
+				DED30BEA175EDE91007A9BCE /* Frameworks */,
+				DED30BEB175EDE91007A9BCE /* Resources */,
+				DED30BEC175EDE91007A9BCE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DED30BF4175EDE91007A9BCE /* PBXTargetDependency */,
+			);
+			name = WordReverserTests;
+			productName = WordReverserTests;
+			productReference = DED30BEE175EDE91007A9BCE /* WordReverserTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		29B97313FDCFA39411CA2CEA /* Project object */ = {
+		DED30BC0175EDE91007A9BCE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Beepscore LLC";
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WordReverser" */;
+			buildConfigurationList = DED30BC3175EDE91007A9BCE /* Build configuration list for PBXProject "WordReverser" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
-			hasScannedForEncodings = 1;
+			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
+				en,
 			);
-			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			mainGroup = DED30BBF175EDE91007A9BCE;
+			productRefGroup = DED30BC9175EDE91007A9BCE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* WordReverser */,
+				DED30BC7175EDE91007A9BCE /* WordReverser */,
+				DED30BED175EDE91007A9BCE /* WordReverserTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+		DED30BC6175EDE91007A9BCE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				DECCA19212A9B03E00A6AA78 /* README in Resources */,
-				DED0C63C175EDA5700F63C44 /* Default-568h@2x.png in Resources */,
+				DED30BD6175EDE91007A9BCE /* InfoPlist.strings in Resources */,
+				DED30BDE175EDE91007A9BCE /* Default.png in Resources */,
+				DED30BE0175EDE91007A9BCE /* Default@2x.png in Resources */,
+				DED30BE2175EDE91007A9BCE /* Default-568h@2x.png in Resources */,
+				DED30BE5175EDE91007A9BCE /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED30BEB175EDE91007A9BCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED30BFA175EDE91007A9BCE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DED30BEC175EDE91007A9BCE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+		DED30BC4175EDE91007A9BCE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* WordReverserAppDelegate.m in Sources */,
+				DED30BD8175EDE91007A9BCE /* main.m in Sources */,
+				DED30BDC175EDE91007A9BCE /* AppDelegate.m in Sources */,
+				DED30BE8175EDE91007A9BCE /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED30BE9175EDE91007A9BCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED30BFD175EDE91007A9BCE /* WordReverserTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DED30BF4175EDE91007A9BCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DED30BC7175EDE91007A9BCE /* WordReverser */;
+			targetProxy = DED30BF3175EDE91007A9BCE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DED30BD4175EDE91007A9BCE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED30BD5175EDE91007A9BCE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DED30BE3175EDE91007A9BCE /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED30BE4175EDE91007A9BCE /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		DED30BF8175EDE91007A9BCE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED30BF9175EDE91007A9BCE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		1D6058940D05DD3E006BFB54 /* Debug */ = {
+		DED30BFE175EDE91007A9BCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = WordReverser_Prefix.pch;
-				INFOPLIST_FILE = "WordReverser-Info.plist";
-				PRODUCT_NAME = WordReverser;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		1D6058950D05DD3E006BFB54 /* Release */ = {
+		DED30BFF175EDE91007A9BCE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = WordReverser_Prefix.pch;
-				INFOPLIST_FILE = "WordReverser-Info.plist";
-				PRODUCT_NAME = WordReverser;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		C01FCF4F08A954540054247B /* Debug */ = {
+		DED30C01175EDE91007A9BCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				SDKROOT = iphoneos;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WordReverser/WordReverser-Prefix.pch";
+				INFOPLIST_FILE = "WordReverser/WordReverser-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		C01FCF5008A954540054247B /* Release */ = {
+		DED30C02175EDE91007A9BCE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WordReverser/WordReverser-Prefix.pch";
+				INFOPLIST_FILE = "WordReverser/WordReverser-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DED30C04175EDE91007A9BCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WordReverser.app/WordReverser";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WordReverser/WordReverser-Prefix.pch";
+				INFOPLIST_FILE = "WordReverserTests/WordReverserTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DED30C05175EDE91007A9BCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WordReverser.app/WordReverser";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WordReverser/WordReverser-Prefix.pch";
+				INFOPLIST_FILE = "WordReverserTests/WordReverserTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "WordReverser" */ = {
+		DED30BC3175EDE91007A9BCE /* Build configuration list for PBXProject "WordReverser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1D6058940D05DD3E006BFB54 /* Debug */,
-				1D6058950D05DD3E006BFB54 /* Release */,
+				DED30BFE175EDE91007A9BCE /* Debug */,
+				DED30BFF175EDE91007A9BCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WordReverser" */ = {
+		DED30C00175EDE91007A9BCE /* Build configuration list for PBXNativeTarget "WordReverser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C01FCF4F08A954540054247B /* Debug */,
-				C01FCF5008A954540054247B /* Release */,
+				DED30C01175EDE91007A9BCE /* Debug */,
+				DED30C02175EDE91007A9BCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+		};
+		DED30C03175EDE91007A9BCE /* Build configuration list for PBXNativeTarget "WordReverserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DED30C04175EDE91007A9BCE /* Debug */,
+				DED30C05175EDE91007A9BCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+	rootObject = DED30BC0175EDE91007A9BCE /* Project object */;
 }
