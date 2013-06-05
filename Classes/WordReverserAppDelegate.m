@@ -81,10 +81,6 @@
 }
 
 
-- (void)dealloc {
-    [window release];
-    [super dealloc];
-}
 
 
 - (NSString*)stringByReversingString:(NSString *)aString
@@ -96,7 +92,7 @@
     
     NSString *tempCharacter1, *tempCharacter2;
     NSRange myRange1, myRange2;
-    NSMutableString *myMutableString = [[[NSMutableString alloc] initWithString:aString] autorelease];
+    NSMutableString *myMutableString = [[NSMutableString alloc] initWithString:aString];
     
     for (int stringPosition = 0; stringPosition < ([myMutableString length]/2); stringPosition++)
     {        
@@ -141,7 +137,7 @@
     }
     
     NSCharacterSet* separators = [[NSCharacterSet alphanumericCharacterSet] invertedSet];
-    NSMutableString *myMutableString = [[[NSMutableString alloc] initWithString:aString] autorelease];
+    NSMutableString *myMutableString = [[NSMutableString alloc] initWithString:aString];
     
     NSInteger stopIndex = 0;
     

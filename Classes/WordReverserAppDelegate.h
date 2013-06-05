@@ -12,7 +12,7 @@
     UIWindow *window;
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, strong) IBOutlet UIWindow *window;
 
 - (NSString *)stringByReversingString:(NSString *)aString;
 - (NSString *)reverseWordsDropPunctuationInString:(NSString *)aString;
