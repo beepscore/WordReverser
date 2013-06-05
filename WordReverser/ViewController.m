@@ -40,12 +40,17 @@
     
     for (int stringPosition = 0; stringPosition < ([myMutableString length]/2); stringPosition++)
     {
+        // ranges of length 1
+        // as loop increments, myRange1 moves from start of string towards center
         myRange1 = NSMakeRange(stringPosition, 1);
+        // as loop increments, myRange2 moves from end of string towards center
         myRange2 = NSMakeRange((([myMutableString length] - 1) - stringPosition), 1);
         
+        // temporary strings for swap
         tempCharacter1 = [myMutableString substringWithRange:myRange1];
         tempCharacter2 = [myMutableString substringWithRange:myRange2];
         
+        // reverse mutable string in place by swapping characters
         [myMutableString replaceCharactersInRange:myRange1 withString:tempCharacter2];
         [myMutableString replaceCharactersInRange:myRange2 withString:tempCharacter1];
     }
