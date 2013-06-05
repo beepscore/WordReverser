@@ -30,11 +30,17 @@
     [super tearDown];
 }
 
+- (void)testReverseWordsDropPunctuationInString
+{
+    NSString* aString = @"This is a good problem.";
+    STAssertEqualObjects(@"sihTsiadoogmelborp", [self.wordReverser reverseWordsDropPunctuationInString:aString],
+                  @"expected strings equal to string");
+}
+
 - (void)testStringByReversingString
 {
     NSString* aString = @"This is a good problem.";
     
-    //    NSLog(@"reverseWordsDropPunctuationInString(%@) = %@", aString, [self reverseWordsDropPunctuationInString:aString]);
     //    NSLog(@"stringByReversingWordsInString(%@) = %@", aString, [self stringByReversingWordsInString:aString]);
     
     STAssertTrue([@"a" isEqualToString:[self.wordReverser stringByReversingString:@"a"]],
