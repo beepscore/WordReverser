@@ -6,7 +6,10 @@
 //  Copyright (c) 2013 Beepscore LLC. All rights reserved.
 //
 
-#import "WordReverserTests.h"
+#import <SenTestingKit/SenTestingKit.h>
+
+@interface WordReverserTests : SenTestCase
+@end
 
 @implementation WordReverserTests
 

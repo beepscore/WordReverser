@@ -56,7 +56,6 @@
 		DED30BEF175EDE91007A9BCE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		DED30BF7175EDE91007A9BCE /* WordReverserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WordReverserTests-Info.plist"; sourceTree = "<group>"; };
 		DED30BF9175EDE91007A9BCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DED30BFB175EDE91007A9BCE /* WordReverserTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordReverserTests.h; sourceTree = "<group>"; };
 		DED30BFC175EDE91007A9BCE /* WordReverserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordReverserTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,7 +143,6 @@
 		DED30BF5175EDE91007A9BCE /* WordReverserTests */ = {
 			isa = PBXGroup;
 			children = (
-				DED30BFB175EDE91007A9BCE /* WordReverserTests.h */,
 				DED30BFC175EDE91007A9BCE /* WordReverserTests.m */,
 				DED30BF6175EDE91007A9BCE /* Supporting Files */,
 			);
@@ -453,6 +451,7 @@
 				DED30C02175EDE91007A9BCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DED30C03175EDE91007A9BCE /* Build configuration list for PBXNativeTarget "WordReverserTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +460,7 @@
 				DED30C05175EDE91007A9BCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
