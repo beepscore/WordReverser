@@ -7,8 +7,10 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "WordReverser.h"
 
 @interface WordReverserTests : SenTestCase
+@property (strong, nonatomic) WordReverser *wordReverser;
 @end
 
 @implementation WordReverserTests
@@ -18,6 +20,7 @@
     [super setUp];
     
     // Set-up code here.
+    self.wordReverser = [[WordReverser alloc] init];
 }
 
 - (void)tearDown
@@ -27,9 +30,17 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testStringByReversingString
 {
-    STFail(@"Unit tests are not implemented yet in WordReverserTests");
+    NSString* aString = @"This is a good problem.";
+    
+    //    NSLog(@"reverseWordsDropPunctuationInString(%@) = %@", aString, [self reverseWordsDropPunctuationInString:aString]);
+    //    NSLog(@"stringByReversingWordsInString(%@) = %@", aString, [self stringByReversingWordsInString:aString]);
+    
+    STAssertTrue([@"a" isEqualToString:[self.wordReverser stringByReversingString:@"a"]],
+                  @"expected strings equal to string");
+    STAssertTrue([@"cba" isEqualToString:[self.wordReverser stringByReversingString:@"abc"]],
+                  @"expected strings equal to string");
 }
 
 @end
