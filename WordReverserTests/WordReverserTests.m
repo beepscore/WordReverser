@@ -39,13 +39,18 @@
 
 - (void)testStringByReversingString
 {
-    NSString* aString = @"This is a good problem.";
-    
-    //    NSLog(@"stringByReversingWordsInString(%@) = %@", aString, [self stringByReversingWordsInString:aString]);
-    
     STAssertTrue([@"a" isEqualToString:[self.wordReverser stringByReversingString:@"a"]],
                   @"expected strings equal to string");
     STAssertTrue([@"cba" isEqualToString:[self.wordReverser stringByReversingString:@"abc"]],
+                  @"expected strings equal to string");
+}
+
+- (void)testStringByReversingWordsInString
+{
+    NSString* aString = @"This is a good problem.";
+    
+    // write test to pass current behavior
+    STAssertEqualObjects(@" sihT si a doog.melborp", [self.wordReverser stringByReversingWordsInString:aString],
                   @"expected strings equal to string");
 }
 
