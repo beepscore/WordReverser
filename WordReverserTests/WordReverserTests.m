@@ -65,6 +65,11 @@
     XCTAssertTrue([@"cba" isEqualToString:[self.wordReverser stringByReversingString:@"abc"]]);
 }
 
+- (void)testStringByReversingStringReversesPunctuationCharacters {
+    XCTAssertTrue([@"!h?g.f,e d:c;b-a"
+                   isEqualToString:[self.wordReverser stringByReversingString:@"a-b;c:d e,f.g?h!"]]);
+}
+
 - (void)testStringByReversingWordsInString {
     NSString* aString = @"This is a good problem.";
     // write test to pass current behavior
