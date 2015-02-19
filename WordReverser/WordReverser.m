@@ -46,7 +46,7 @@
 
 - (NSString*)stringByReversingString:(NSString *)aString
 {
-    if (0 == [aString length])
+    if (1 >= [aString length])
     {
         return aString;
     }
@@ -77,7 +77,7 @@
 
 - (NSString *)reverseWordsDropPunctuationInString:(NSString *)aString
 {
-    if (!aString || (0 == [aString length]))
+    if (!aString || (1 >= [aString length]))
     {
         return aString;
     }
@@ -96,7 +96,7 @@
 
 - (NSString *)stringByReversingWordsInString:(NSString *)aString
 {
-    if (!aString || (0 == [aString length]))
+    if (!aString || (1 >= [aString length]))
     {
         return aString;
     }
