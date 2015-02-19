@@ -19,7 +19,6 @@
 		DED30BE2175EDE91007A9BCE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DED30BE1175EDE91007A9BCE /* Default-568h@2x.png */; };
 		DED30BE5175EDE91007A9BCE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED30BE3175EDE91007A9BCE /* MainStoryboard.storyboard */; };
 		DED30BE8175EDE91007A9BCE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED30BE7175EDE91007A9BCE /* ViewController.m */; };
-		DED30BF0175EDE91007A9BCE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED30BEF175EDE91007A9BCE /* SenTestingKit.framework */; };
 		DED30BF1175EDE91007A9BCE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED30BCB175EDE91007A9BCE /* UIKit.framework */; };
 		DED30BF2175EDE91007A9BCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED30BCD175EDE91007A9BCE /* Foundation.framework */; };
 		DED30BFA175EDE91007A9BCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED30BF8175EDE91007A9BCE /* InfoPlist.strings */; };
@@ -56,7 +55,6 @@
 		DED30BE6175EDE91007A9BCE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DED30BE7175EDE91007A9BCE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DED30BEE175EDE91007A9BCE /* WordReverserTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordReverserTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DED30BEF175EDE91007A9BCE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		DED30BF7175EDE91007A9BCE /* WordReverserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WordReverserTests-Info.plist"; sourceTree = "<group>"; };
 		DED30BF9175EDE91007A9BCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DED30BFC175EDE91007A9BCE /* WordReverserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordReverserTests.m; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED30BF0175EDE91007A9BCE /* SenTestingKit.framework in Frameworks */,
 				DED30BF1175EDE91007A9BCE /* UIKit.framework in Frameworks */,
 				DED30BF2175EDE91007A9BCE /* Foundation.framework in Frameworks */,
 			);
@@ -111,7 +108,6 @@
 				DED30BCB175EDE91007A9BCE /* UIKit.framework */,
 				DED30BCD175EDE91007A9BCE /* Foundation.framework */,
 				DED30BCF175EDE91007A9BCE /* CoreGraphics.framework */,
-				DED30BEF175EDE91007A9BCE /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,7 +196,7 @@
 			name = WordReverserTests;
 			productName = WordReverserTests;
 			productReference = DED30BEE175EDE91007A9BCE /* WordReverserTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -208,6 +204,7 @@
 		DED30BC0175EDE91007A9BCE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0610;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Beepscore LLC";
 			};
@@ -351,7 +348,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -375,7 +372,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -411,13 +408,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WordReverser/WordReverser-Prefix.pch";
 				INFOPLIST_FILE = "WordReverserTests/WordReverserTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -428,13 +425,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WordReverser/WordReverser-Prefix.pch";
 				INFOPLIST_FILE = "WordReverserTests/WordReverserTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Beepscore LLC. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "WordReverser.h"
 
-@interface WordReverserTests : SenTestCase
+@interface WordReverserTests : XCTestCase
 @property (strong, nonatomic) WordReverser *wordReverser;
 @end
 
@@ -33,15 +33,15 @@
 - (void)testReverseWordsDropPunctuationInString
 {
     NSString* aString = @"This is a good problem.";
-    STAssertEqualObjects(@"sihTsiadoogmelborp", [self.wordReverser reverseWordsDropPunctuationInString:aString],
+    XCTAssertEqualObjects(@"sihTsiadoogmelborp", [self.wordReverser reverseWordsDropPunctuationInString:aString],
                   @"expected strings equal to string");
 }
 
 - (void)testStringByReversingString
 {
-    STAssertTrue([@"a" isEqualToString:[self.wordReverser stringByReversingString:@"a"]],
+    XCTAssertTrue([@"a" isEqualToString:[self.wordReverser stringByReversingString:@"a"]],
                   @"expected strings equal to string");
-    STAssertTrue([@"cba" isEqualToString:[self.wordReverser stringByReversingString:@"abc"]],
+    XCTAssertTrue([@"cba" isEqualToString:[self.wordReverser stringByReversingString:@"abc"]],
                   @"expected strings equal to string");
 }
 
@@ -50,7 +50,7 @@
     NSString* aString = @"This is a good problem.";
     
     // write test to pass current behavior
-    STAssertEqualObjects(@" sihT si a doog.melborp", [self.wordReverser stringByReversingWordsInString:aString],
+    XCTAssertEqualObjects(@" sihT si a doog.melborp", [self.wordReverser stringByReversingWordsInString:aString],
                   @"expected strings equal to string");
 }
 
