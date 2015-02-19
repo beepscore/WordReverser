@@ -46,8 +46,7 @@
 
 - (NSString*)stringByReversingString:(NSString *)aString
 {
-    if (1 >= [aString length])
-    {
+    if (!aString || (1 >= [aString length])) {
         return aString;
     }
     
@@ -77,8 +76,7 @@
 
 - (NSString *)reverseWordsDropPunctuationInString:(NSString *)aString
 {
-    if (!aString || (1 >= [aString length]))
-    {
+    if (!aString || (1 >= [aString length])) {
         return aString;
     }
     
@@ -96,8 +94,7 @@
 
 - (NSString *)stringByReversingWordsInString:(NSString *)aString
 {
-    if (!aString || (1 >= [aString length]))
-    {
+    if (!aString || (1 >= [aString length])) {
         return aString;
     }
     
@@ -109,17 +106,14 @@
     NSString *myWord;
 
 
-    for (NSInteger startIndex = 0; ([myMutableString length] > startIndex); startIndex++)
-    {
+    for (NSInteger startIndex = 0; ([myMutableString length] > startIndex); startIndex++) {
         
-        if (![self.separators characterIsMember:[myMutableString characterAtIndex:startIndex]])
-        {
+        if (![self.separators characterIsMember:[myMutableString characterAtIndex:startIndex]]) {
             // we're at the start of a word
             stopIndex = startIndex;
             // advance stopIndex to end of the word
             while (![self.separators characterIsMember:[myMutableString characterAtIndex:stopIndex]]
-                   && ([myMutableString length] > stopIndex))
-            {
+                   && ([myMutableString length] > stopIndex)) {
                 stopIndex++;
             }
             
@@ -133,9 +127,7 @@
             // startIndex will be incremented by loop too
             startIndex = stopIndex;
         }
-        
     }
-    
     return myMutableString;
 }
 
