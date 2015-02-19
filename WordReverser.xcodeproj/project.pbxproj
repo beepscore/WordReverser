@@ -54,7 +54,7 @@
 		DED30BE4175EDE91007A9BCE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DED30BE6175EDE91007A9BCE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DED30BE7175EDE91007A9BCE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		DED30BEE175EDE91007A9BCE /* WordReverserTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordReverserTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED30BEE175EDE91007A9BCE /* WordReverserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordReverserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED30BF7175EDE91007A9BCE /* WordReverserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WordReverserTests-Info.plist"; sourceTree = "<group>"; };
 		DED30BF9175EDE91007A9BCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DED30BFC175EDE91007A9BCE /* WordReverserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordReverserTests.m; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				DED30BC8175EDE91007A9BCE /* WordReverser.app */,
-				DED30BEE175EDE91007A9BCE /* WordReverserTests.octest */,
+				DED30BEE175EDE91007A9BCE /* WordReverserTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,7 +195,7 @@
 			);
 			name = WordReverserTests;
 			productName = WordReverserTests;
-			productReference = DED30BEE175EDE91007A9BCE /* WordReverserTests.octest */;
+			productReference = DED30BEE175EDE91007A9BCE /* WordReverserTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
