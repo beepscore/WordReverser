@@ -90,39 +90,43 @@
 }
 
 
+- (NSInteger)wordStopIndexWithString:(NSString *)aString wordStartIndex:(NSInteger)startIndex {
+    if (!aString
+        || (startIndex > [aString length] - 1)) {
+        return 0;
+    }
+
+    NSInteger stopIndex = startIndex;
+    // advance stopIndex to end of the word
+    // stopIndex is before last character in string
+    // and character after stopIndex isn't a separator
+    while ((stopIndex < [aString length] - 1)
+           && ![self.separators characterIsMember:[aString characterAtIndex:stopIndex + 1]]) {
+        stopIndex++;
+    }
+    return stopIndex;
+}
+
 - (NSString *)stringByReversingWordsInString:(NSString *)aString {
     if (!aString || (1 >= [aString length])) {
         return aString;
     }
     
     NSMutableString *myMutableString = [[NSMutableString alloc] initWithString:aString];
-    
-    NSInteger stopIndex = 0;
-    
-    NSRange myRange;
-    NSString *myWord;
-
 
     for (NSInteger startIndex = 0; ([myMutableString length] > startIndex); startIndex++) {
         
         if (![self.separators characterIsMember:[myMutableString characterAtIndex:startIndex]]) {
             // we're at the start of a word
-            stopIndex = startIndex;
 
-            // advance stopIndex to end of the word
-            // stopIndex is before last character in string
-            // and character after stopIndex isn't a separator
-            while ((stopIndex < [myMutableString length] - 1)
-                && ![self.separators characterIsMember:[myMutableString characterAtIndex:stopIndex + 1]]) {
-                stopIndex++;
-            }
+            NSInteger stopIndex = [self wordStopIndexWithString:myMutableString
+                                                 wordStartIndex:startIndex];
+            NSRange myRange = NSMakeRange(startIndex, (stopIndex - startIndex) + 1);
 
-            myRange = NSMakeRange(startIndex, (stopIndex - startIndex) + 1);
-            myWord = [myMutableString substringWithRange:myRange];
-
-            myWord = [self stringByReversingString:myWord];
+            NSString *myWord = [myMutableString substringWithRange:myRange];
+            NSString *myReversedWord = [self stringByReversingString:myWord];
             
-            [myMutableString replaceCharactersInRange:myRange withString:myWord];
+            [myMutableString replaceCharactersInRange:myRange withString:myReversedWord];
             
             // startIndex will be incremented by loop too
             startIndex = stopIndex;

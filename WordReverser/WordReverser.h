@@ -18,6 +18,8 @@
 
 - (NSMutableArray*)arrayFromCharacterSet:(NSCharacterSet *)characterSet;
 
+- (NSInteger)wordStopIndexWithString:(NSString *)aString wordStartIndex:(NSInteger)startIndex;
+
 /**
  stringByReversingString reverses in place
  This reduces memory requirements.

@@ -59,6 +59,13 @@
                           [self.wordReverser reverseWordsStripPunctuationInString:aString]);
 }
 
+- (void)testWordStopIndexWithStringWordStartIndex {
+    XCTAssertEqual(0, [self.wordReverser wordStopIndexWithString:@"a" wordStartIndex:0]);
+    XCTAssertEqual(0, [self.wordReverser wordStopIndexWithString:@"a." wordStartIndex:0]);
+    XCTAssertEqual(2, [self.wordReverser wordStopIndexWithString:@"the cat." wordStartIndex:0]);
+    XCTAssertEqual(6, [self.wordReverser wordStopIndexWithString:@"the cat." wordStartIndex:4]);
+}
+
 - (void)testStringByReversingString {
     XCTAssertTrue([@"a" isEqualToString:[self.wordReverser stringByReversingString:@"a"]],
                   @"expected strings equal to string");
