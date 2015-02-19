@@ -10,6 +10,40 @@
 
 @implementation WordReverser
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        // https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/Strings/Articles/CharacterSets.html#//apple_ref/doc/uid/20000153-74241
+        NSMutableCharacterSet *workingSet = [[NSCharacterSet punctuationCharacterSet] mutableCopy];
+        // add space
+        [workingSet addCharactersInString:@" "];
+        self.separators = [workingSet copy];
+    }
+    return self;
+}
+
+// Use to check definition of punctuationCharacterSet
+// Reference
+// http://stackoverflow.com/questions/26610931/list-of-characters-in-an-nscharacterset?rq=1
+// https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/Strings/Articles/CharacterSets.html#//apple_ref/doc/uid/20000153-74241
+// http://www.unicode.org/
+- (NSMutableArray*)arrayFromCharacterSet:(NSCharacterSet *)charset {
+    NSMutableArray *array = [NSMutableArray array];
+    for (int plane = 0; plane <= 16; plane++) {
+        if ([charset hasMemberInPlane:plane]) {
+            UTF32Char c;
+            for (c = plane << 16; c < (plane+1) << 16; c++) {
+                if ([charset longCharacterIsMember:c]) {
+                    UTF32Char c1 = OSSwapHostToLittleInt32(c); // To make it byte-order safe
+                    NSString *s = [[NSString alloc] initWithBytes:&c1 length:4 encoding:NSUTF32LittleEndianStringEncoding];
+                    [array addObject:s];
+                }
+            }
+        }
+    }
+    return array;
+}
+
 - (NSString*)stringByReversingString:(NSString *)aString
 {
     if (0 == [aString length])
@@ -50,9 +84,8 @@
     
     NSString *myString = @"";
     
-    NSCharacterSet* separators = [[NSCharacterSet alphanumericCharacterSet] invertedSet];
-    
-    NSArray *words = [aString componentsSeparatedByCharactersInSet:separators];
+
+    NSArray *words = [aString componentsSeparatedByCharactersInSet:self.separators];
     
     for (NSString* word in words) {
         myString = [myString stringByAppendingString:[self stringByReversingString:word]];
@@ -68,24 +101,23 @@
         return aString;
     }
     
-    NSCharacterSet* separators = [[NSCharacterSet alphanumericCharacterSet] invertedSet];
     NSMutableString *myMutableString = [[NSMutableString alloc] initWithString:aString];
     
     NSInteger stopIndex = 0;
     
     NSRange myRange;
     NSString *myWord;
-    
-    
+
+
     for (NSInteger startIndex = 0; ([myMutableString length] > startIndex); startIndex++)
     {
         
-        if (![separators characterIsMember:[myMutableString characterAtIndex:startIndex]])
+        if (![self.separators characterIsMember:[myMutableString characterAtIndex:startIndex]])
         {
             // we're at the start of a word
             stopIndex = startIndex;
             // advance stopIndex to end of the word
-            while (![separators characterIsMember:[myMutableString characterAtIndex:stopIndex]]
+            while (![self.separators characterIsMember:[myMutableString characterAtIndex:stopIndex]]
                    && ([myMutableString length] > stopIndex))
             {
                 stopIndex++;

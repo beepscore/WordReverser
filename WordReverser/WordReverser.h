@@ -14,6 +14,10 @@
 
 @interface WordReverser : NSObject
 
+@property (strong, nonatomic) NSCharacterSet* separators;
+
+- (NSMutableArray*)arrayFromCharacterSet:(NSCharacterSet *)characterSet;
+
 - (NSString*)stringByReversingString:(NSString *)aString;
 
 - (NSString *)reverseWordsDropPunctuationInString:(NSString *)aString;

@@ -15,43 +15,61 @@
 
 @implementation WordReverserTests
 
-- (void)setUp
-{
+- (void)setUp {
     [super setUp];
     
     // Set-up code here.
     self.wordReverser = [[WordReverser alloc] init];
 }
 
-- (void)tearDown
-{
+- (void)tearDown {
     // Tear-down code here.
     
     [super tearDown];
 }
 
-- (void)testReverseWordsDropPunctuationInString
-{
-    NSString* aString = @"This is a good problem.";
-    XCTAssertEqualObjects(@"sihTsiadoogmelborp", [self.wordReverser reverseWordsDropPunctuationInString:aString],
-                  @"expected strings equal to string");
+- (void)testArrayFromCharacterSetPunctuation {
+    NSArray *punctuationArray = [self.wordReverser
+                                arrayFromCharacterSet:[NSCharacterSet punctuationCharacterSet]];
+    XCTAssertEqual(636, [punctuationArray count]);
+    XCTAssertFalse([punctuationArray containsObject:@" "]);
+
+    XCTAssertTrue([punctuationArray containsObject:@"-"]);
+    XCTAssertTrue([punctuationArray containsObject:@";"]);
+    XCTAssertTrue([punctuationArray containsObject:@":"]);
+    XCTAssertTrue([punctuationArray containsObject:@"."]);
+    XCTAssertTrue([punctuationArray containsObject:@","]);
 }
 
-- (void)testStringByReversingString
-{
+- (void)testSeparators {
+    NSArray *separatorsArray = [self.wordReverser
+                                arrayFromCharacterSet:self.wordReverser.separators];
+    XCTAssertEqual(637, [separatorsArray count]);
+    XCTAssertTrue([separatorsArray containsObject:@"-"]);
+    XCTAssertTrue([separatorsArray containsObject:@";"]);
+    XCTAssertTrue([separatorsArray containsObject:@":"]);
+    XCTAssertTrue([separatorsArray containsObject:@"."]);
+    XCTAssertTrue([separatorsArray containsObject:@","]);
+    XCTAssertTrue([separatorsArray containsObject:@" "]);
+}
+
+- (void)testReverseWordsDropPunctuationInString {
+    NSString* aString = @"This is a good problem.";
+    XCTAssertEqualObjects(@"sihTsiadoogmelborp",
+                          [self.wordReverser reverseWordsDropPunctuationInString:aString]);
+}
+
+- (void)testStringByReversingString {
     XCTAssertTrue([@"a" isEqualToString:[self.wordReverser stringByReversingString:@"a"]],
                   @"expected strings equal to string");
-    XCTAssertTrue([@"cba" isEqualToString:[self.wordReverser stringByReversingString:@"abc"]],
-                  @"expected strings equal to string");
+    XCTAssertTrue([@"cba" isEqualToString:[self.wordReverser stringByReversingString:@"abc"]]);
 }
 
-- (void)testStringByReversingWordsInString
-{
+- (void)testStringByReversingWordsInString {
     NSString* aString = @"This is a good problem.";
-    
     // write test to pass current behavior
-    XCTAssertEqualObjects(@" sihT si a doog.melborp", [self.wordReverser stringByReversingWordsInString:aString],
-                  @"expected strings equal to string");
+    XCTAssertEqualObjects(@" sihT si a doog.melborp",
+                          [self.wordReverser stringByReversingWordsInString:aString]);
 }
 
 @end
