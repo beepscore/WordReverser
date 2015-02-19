@@ -68,18 +68,19 @@
         [myMutableString replaceCharactersInRange:myRange1 withString:tempCharacter2];
         [myMutableString replaceCharactersInRange:myRange2 withString:tempCharacter1];
     }
-    return myMutableString;
+    // convert mutable string to NSString to reduce chance of surprising the caller
+    return [NSString stringWithString:myMutableString];
 }
 
 
-- (NSString *)reverseWordsDropPunctuationInString:(NSString *)aString {
+- (NSString *)reverseWordsStripPunctuationInString:(NSString *)aString {
     if (!aString || (1 >= [aString length])) {
         return aString;
     }
     
     NSString *myString = @"";
-    
 
+    // split string into an array of words, discarding separators.
     NSArray *words = [aString componentsSeparatedByCharactersInSet:self.separators];
     
     for (NSString* word in words) {
@@ -127,7 +128,8 @@
             startIndex = stopIndex;
         }
     }
-    return myMutableString;
+    // convert mutable string to NSString to reduce chance of surprising the caller
+    return [NSString stringWithString:myMutableString];
 }
 
 @end

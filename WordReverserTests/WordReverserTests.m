@@ -53,10 +53,10 @@
     XCTAssertTrue([separatorsArray containsObject:@" "]);
 }
 
-- (void)testReverseWordsDropPunctuationInString {
+- (void)testReverseWordsStripPunctuationInString {
     NSString* aString = @"This is a good problem.";
     XCTAssertEqualObjects(@"sihTsiadoogmelborp",
-                          [self.wordReverser reverseWordsDropPunctuationInString:aString]);
+                          [self.wordReverser reverseWordsStripPunctuationInString:aString]);
 }
 
 - (void)testStringByReversingString {
@@ -82,11 +82,17 @@
                           [self.wordReverser stringByReversingWordsInString:aString]);
 }
 
-
 - (void)testStringByReversingWordsInString {
     NSString* aString = @"This is a good problem.";
     // write test to pass current behavior
     XCTAssertEqualObjects(@"sihT si a doog melborp.",
+                          [self.wordReverser stringByReversingWordsInString:aString]);
+}
+
+- (void)testStringByReversingWordsInStringMultiplePuncuations {
+    NSString* aString = @"I think. Therefore- I am!";
+    // write test to pass current behavior
+    XCTAssertEqualObjects(@"I kniht. eroferehT- I ma!",
                           [self.wordReverser stringByReversingWordsInString:aString]);
 }
 

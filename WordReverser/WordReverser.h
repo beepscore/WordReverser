@@ -18,9 +18,13 @@
 
 - (NSMutableArray*)arrayFromCharacterSet:(NSCharacterSet *)characterSet;
 
+/**
+ stringByReversingString reverses in place
+ This reduces memory requirements.
+ */
 - (NSString*)stringByReversingString:(NSString *)aString;
 
-- (NSString *)reverseWordsDropPunctuationInString:(NSString *)aString;
+- (NSString *)reverseWordsStripPunctuationInString:(NSString *)aString;
 
 - (NSString *)stringByReversingWordsInString:(NSString *)aString;
 
