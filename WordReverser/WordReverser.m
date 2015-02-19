@@ -44,8 +44,7 @@
     return array;
 }
 
-- (NSString*)stringByReversingString:(NSString *)aString
-{
+- (NSString*)stringByReversingString:(NSString *)aString {
     if (!aString || (1 >= [aString length])) {
         return aString;
     }
@@ -54,8 +53,7 @@
     NSRange myRange1, myRange2;
     NSMutableString *myMutableString = [[NSMutableString alloc] initWithString:aString];
     
-    for (int stringPosition = 0; stringPosition < ([myMutableString length]/2); stringPosition++)
-    {
+    for (int stringPosition = 0; stringPosition < ([myMutableString length]/2); stringPosition++) {
         // ranges of length 1
         // as loop increments, myRange1 moves from start of string towards center
         myRange1 = NSMakeRange(stringPosition, 1);
@@ -74,8 +72,7 @@
 }
 
 
-- (NSString *)reverseWordsDropPunctuationInString:(NSString *)aString
-{
+- (NSString *)reverseWordsDropPunctuationInString:(NSString *)aString {
     if (!aString || (1 >= [aString length])) {
         return aString;
     }
@@ -92,8 +89,7 @@
 }
 
 
-- (NSString *)stringByReversingWordsInString:(NSString *)aString
-{
+- (NSString *)stringByReversingWordsInString:(NSString *)aString {
     if (!aString || (1 >= [aString length])) {
         return aString;
     }
