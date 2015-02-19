@@ -38,6 +38,8 @@
 /* Begin PBXFileReference section */
 		DE1027F8175FC5FB00E37A17 /* WordReverser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordReverser.h; sourceTree = "<group>"; };
 		DE1027F9175FC5FB00E37A17 /* WordReverser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordReverser.m; sourceTree = "<group>"; };
+		DE72A4921A96694B0019FDDC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DE72A4941A9669600019FDDC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DED30BC8175EDE91007A9BCE /* WordReverser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordReverser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED30BCB175EDE91007A9BCE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DED30BCD175EDE91007A9BCE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +88,8 @@
 		DED30BBF175EDE91007A9BCE = {
 			isa = PBXGroup;
 			children = (
+				DE72A4921A96694B0019FDDC /* README.md */,
+				DE72A4941A9669600019FDDC /* LICENSE */,
 				DED30BD1175EDE91007A9BCE /* WordReverser */,
 				DED30BF5175EDE91007A9BCE /* WordReverserTests */,
 				DED30BCA175EDE91007A9BCE /* Frameworks */,
