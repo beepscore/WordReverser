@@ -107,15 +107,18 @@
         if (![self.separators characterIsMember:[myMutableString characterAtIndex:startIndex]]) {
             // we're at the start of a word
             stopIndex = startIndex;
+
             // advance stopIndex to end of the word
-            while (![self.separators characterIsMember:[myMutableString characterAtIndex:stopIndex]]
-                   && ([myMutableString length] > stopIndex)) {
+            // stopIndex is before last character in string
+            // and character after stopIndex isn't a separator
+            while ((stopIndex < [myMutableString length] - 1)
+                && ![self.separators characterIsMember:[myMutableString characterAtIndex:stopIndex + 1]]) {
                 stopIndex++;
             }
-            
-            myRange = NSMakeRange(startIndex, (stopIndex - startIndex)+1);
+
+            myRange = NSMakeRange(startIndex, (stopIndex - startIndex) + 1);
             myWord = [myMutableString substringWithRange:myRange];
-            
+
             myWord = [self stringByReversingString:myWord];
             
             [myMutableString replaceCharactersInRange:myRange withString:myWord];

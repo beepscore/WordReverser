@@ -70,10 +70,23 @@
                    isEqualToString:[self.wordReverser stringByReversingString:@"a-b;c:d e,f.g?h!"]]);
 }
 
+- (void)testStringByReversingWordsInStringLetterPunctuation {
+    NSString* aString = @"a.";
+    XCTAssertEqualObjects(@"a.",
+                          [self.wordReverser stringByReversingWordsInString:aString]);
+}
+
+- (void)testStringByReversingWordsInStringTwoWords {
+    NSString* aString = @"two words";
+    XCTAssertEqualObjects(@"owt sdrow",
+                          [self.wordReverser stringByReversingWordsInString:aString]);
+}
+
+
 - (void)testStringByReversingWordsInString {
     NSString* aString = @"This is a good problem.";
     // write test to pass current behavior
-    XCTAssertEqualObjects(@" sihT si a doog.melborp",
+    XCTAssertEqualObjects(@"sihT si a doog melborp.",
                           [self.wordReverser stringByReversingWordsInString:aString]);
 }
 
