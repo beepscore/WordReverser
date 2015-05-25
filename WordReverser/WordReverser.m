@@ -86,6 +86,21 @@
     return [NSString stringWithString:myMutableString];
 }
 
+- (NSString *)stringByReversingStringExceptEndingSeparator:(NSString *)aString {
+    if (!aString || (1 >= [aString length])) {
+        return aString;
+    }
+    
+    if (![self isLastCharSeparator:aString]) {
+        return [self stringByReversingString:aString];
+    } else {
+        NSString *lastCharacter = [aString substringFromIndex:[aString length] - 1];
+        NSString *stringByRemovingLastCharacter = [aString substringToIndex:[aString length] -1];
+        NSString *reversedString = [self stringByReversingString:stringByRemovingLastCharacter];
+        NSString *reversedStringAppendLastCharacter = [reversedString stringByAppendingString:lastCharacter];
+        return reversedStringAppendLastCharacter;
+    }
+}
 
 - (NSString *)reverseWordsStripPunctuationInString:(NSString *)aString {
     if (!aString || (1 >= [aString length])) {
@@ -102,7 +117,6 @@
     }
     return myString;
 }
-
 
 - (NSInteger)wordStopIndexWithString:(NSString *)aString wordStartIndex:(NSInteger)startIndex {
     if (!aString

@@ -28,6 +28,8 @@
  */
 - (NSString*)stringByReversingString:(NSString *)aString;
 
+- (NSString *)stringByReversingStringExceptEndingSeparator:(NSString *)aString;
+    
 - (NSString *)reverseWordsStripPunctuationInString:(NSString *)aString;
 
 - (NSString *)stringByReversingWordsInString:(NSString *)aString;

@@ -119,4 +119,28 @@
                           [self.wordReverser stringByReversingWordsInString:aString]);
 }
 
+- (void)testStringByReversingStringExceptEndingSeparator {
+    NSString* aString = nil;
+    XCTAssertNil([self.wordReverser stringByReversingStringExceptEndingSeparator:aString]);
+
+    aString = @"";
+    XCTAssertEqualObjects(@"",
+                          [self.wordReverser stringByReversingStringExceptEndingSeparator:aString]);
+    aString = @".";
+    XCTAssertEqualObjects(@".",
+                          [self.wordReverser stringByReversingStringExceptEndingSeparator:aString]);
+    aString = @"m.";
+    XCTAssertEqualObjects(@"m.",
+                          [self.wordReverser stringByReversingStringExceptEndingSeparator:aString]);
+    aString = @"you.";
+    XCTAssertEqualObjects(@"uoy.",
+                          [self.wordReverser stringByReversingStringExceptEndingSeparator:aString]);
+    aString = @"This is a good problem.";
+    XCTAssertEqualObjects(@"melborp doog a si sihT.",
+                          [self.wordReverser stringByReversingStringExceptEndingSeparator:aString]);
+    aString = @"I think. Therefore- I am!";
+    XCTAssertEqualObjects(@"ma I -eroferehT .kniht I!",
+                          [self.wordReverser stringByReversingStringExceptEndingSeparator:aString]);
+}
+
 @end
