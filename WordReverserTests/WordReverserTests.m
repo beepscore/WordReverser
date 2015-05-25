@@ -53,6 +53,22 @@
     XCTAssertTrue([separatorsArray containsObject:@" "]);
 }
 
+- (void)testIsLastCharSeparatorFalse {
+    XCTAssertFalse([self.wordReverser isLastCharSeparator:nil]);
+    XCTAssertFalse([self.wordReverser isLastCharSeparator:@""]);
+    XCTAssertFalse([self.wordReverser isLastCharSeparator:@"a"]);
+    XCTAssertFalse([self.wordReverser isLastCharSeparator:@".a"]);
+    XCTAssertFalse([self.wordReverser isLastCharSeparator:@"a.c"]);
+}
+
+- (void)testIsLastCharSeparatorTrue {
+    XCTAssertTrue([self.wordReverser isLastCharSeparator:@"."]);
+    XCTAssertTrue([self.wordReverser isLastCharSeparator:@"!"]);
+    XCTAssertTrue([self.wordReverser isLastCharSeparator:@"a."]);
+    XCTAssertTrue([self.wordReverser isLastCharSeparator:@"g?"]);
+    XCTAssertTrue([self.wordReverser isLastCharSeparator:@"g!a;"]);
+}
+
 - (void)testReverseWordsStripPunctuationInString {
     NSString* aString = @"This is a good problem.";
     XCTAssertEqualObjects(@"sihTsiadoogmelborp",

@@ -44,6 +44,20 @@
     return array;
 }
 
+- (BOOL)isLastCharSeparator:(NSString *)aString {
+    if (!aString || (0 == [aString length])) {
+        return NO;
+    }
+    
+    unichar lastChar = [aString characterAtIndex:([aString length] - 1)];
+    
+    if ([self.separators characterIsMember:lastChar]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 - (NSString*)stringByReversingString:(NSString *)aString {
     if (!aString || (1 >= [aString length])) {
         return aString;

@@ -18,6 +18,8 @@
 
 - (NSMutableArray*)arrayFromCharacterSet:(NSCharacterSet *)characterSet;
 
+- (BOOL)isLastCharSeparator:(NSString *)aString;
+
 - (NSInteger)wordStopIndexWithString:(NSString *)aString wordStartIndex:(NSInteger)startIndex;
 
 /**
