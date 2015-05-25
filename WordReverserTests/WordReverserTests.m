@@ -31,7 +31,7 @@
 - (void)testArrayFromCharacterSetPunctuation {
     NSArray *punctuationArray = [self.wordReverser
                                 arrayFromCharacterSet:[NSCharacterSet punctuationCharacterSet]];
-    XCTAssertEqual(636, [punctuationArray count]);
+    XCTAssertEqual(688, [punctuationArray count]);
     XCTAssertFalse([punctuationArray containsObject:@" "]);
 
     XCTAssertTrue([punctuationArray containsObject:@"-"]);
@@ -44,7 +44,7 @@
 - (void)testSeparators {
     NSArray *separatorsArray = [self.wordReverser
                                 arrayFromCharacterSet:self.wordReverser.separators];
-    XCTAssertEqual(637, [separatorsArray count]);
+    XCTAssertEqual(689, [separatorsArray count]);
     XCTAssertTrue([separatorsArray containsObject:@"-"]);
     XCTAssertTrue([separatorsArray containsObject:@";"]);
     XCTAssertTrue([separatorsArray containsObject:@":"]);
