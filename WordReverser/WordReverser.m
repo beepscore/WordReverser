@@ -206,7 +206,7 @@ NSString *kSpaceCharAsString = @" ";
     return myString;
 }
 
-- (NSString *)stringByReversingWordsInString:(NSString *)aString {
+- (NSString *)stringByReversingWordLetters:(NSString *)aString {
     if (!aString || (1 >= [aString length])) {
         return aString;
     }

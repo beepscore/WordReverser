@@ -121,30 +121,28 @@
                    isEqualToString:[self.wordReverser stringByReversingString:@"a-b;c:d e,f.g?h!"]]);
 }
 
-- (void)testStringByReversingWordsInStringLetterPunctuation {
+- (void)testStringByReversingWordLettersPunctuation {
     NSString* aString = @"a.";
     XCTAssertEqualObjects(@"a.",
-                          [self.wordReverser stringByReversingWordsInString:aString]);
+                          [self.wordReverser stringByReversingWordLetters:aString]);
 }
 
-- (void)testStringByReversingWordsInStringTwoWords {
+- (void)testStringByReversingWordLettersTwoWords {
     NSString* aString = @"two words";
     XCTAssertEqualObjects(@"owt sdrow",
-                          [self.wordReverser stringByReversingWordsInString:aString]);
+                          [self.wordReverser stringByReversingWordLetters:aString]);
 }
 
-- (void)testStringByReversingWordsInString {
+- (void)testStringByReversingWordLetters {
     NSString* aString = @"This is a good problem.";
-    // write test to pass current behavior
     XCTAssertEqualObjects(@"sihT si a doog melborp.",
-                          [self.wordReverser stringByReversingWordsInString:aString]);
+                          [self.wordReverser stringByReversingWordLetters:aString]);
 }
 
-- (void)testStringByReversingWordsInStringMultiplePuncuations {
+- (void)testStringByReversingWordLettersMultiplePuncuations {
     NSString* aString = @"I think. Therefore- I am!";
-    // write test to pass current behavior
     XCTAssertEqualObjects(@"I kniht. eroferehT- I ma!",
-                          [self.wordReverser stringByReversingWordsInString:aString]);
+                          [self.wordReverser stringByReversingWordLetters:aString]);
 }
 
 - (void)testStringByReversingStringExceptEndingSeparator {
