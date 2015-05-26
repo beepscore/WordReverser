@@ -10,13 +10,15 @@
 
 @implementation WordReverser
 
+NSString *kSpaceCharAsString = @" ";
+
 - (id)init {
     self = [super init];
     if (self) {
         // https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/Strings/Articles/CharacterSets.html#//apple_ref/doc/uid/20000153-74241
         NSMutableCharacterSet *workingSet = [[NSCharacterSet punctuationCharacterSet] mutableCopy];
         // add space
-        [workingSet addCharactersInString:@" "];
+        [workingSet addCharactersInString:kSpaceCharAsString];
         self.separators = [workingSet copy];
     }
     return self;
@@ -79,7 +81,6 @@
 - (NSInteger)wordEndIndexFromString:(NSString *)aString
                          startIndex:(NSInteger)startIndex {
 
-    NSString *spaceCharAsString = @" ";
 
     // TODO: handle startIndex is space
 
@@ -92,7 +93,7 @@
 
         NSString *charAtIndexAsString = [aString
                                          substringWithRange:NSMakeRange(index, 1)];
-        if ([charAtIndexAsString isEqualToString:spaceCharAsString]) {
+        if ([charAtIndexAsString isEqualToString:kSpaceCharAsString]) {
             if (index == startIndex) {
                 return index;
             } else {
