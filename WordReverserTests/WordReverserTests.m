@@ -82,6 +82,23 @@
     XCTAssertEqual(6, [self.wordReverser wordStopIndexWithString:@"the cat." wordStartIndex:4]);
 }
 
+- (void)testWordEndIndexFromStringStartIndex {
+    XCTAssertEqual(0, [self.wordReverser wordEndIndexFromString:@"a" startIndex:0]);
+    XCTAssertEqual(1, [self.wordReverser wordEndIndexFromString:@"a." startIndex:0]);
+    XCTAssertEqual(2, [self.wordReverser wordEndIndexFromString:@"the cat." startIndex:0]);
+    XCTAssertEqual(7, [self.wordReverser wordEndIndexFromString:@"the cat." startIndex:4]);
+}
+
+- (void)testWordEndIndexFromStringStartIndexError {
+    XCTAssertEqual(-1, [self.wordReverser wordEndIndexFromString:nil startIndex:0]);
+    XCTAssertEqual(-1, [self.wordReverser wordEndIndexFromString:@"" startIndex:0]);
+}
+
+- (void)testWordEndIndexFromStringStartIndexSpace {
+    XCTAssertEqual(0, [self.wordReverser wordEndIndexFromString:@" " startIndex:0]);
+    XCTAssertEqual(3, [self.wordReverser wordEndIndexFromString:@"the cat." startIndex:3]);
+}
+
 - (void)testStringByReversingString {
     XCTAssertTrue([@"a" isEqualToString:[self.wordReverser stringByReversingString:@"a"]],
                   @"expected strings equal to string");

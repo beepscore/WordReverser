@@ -58,6 +58,53 @@
     }
 }
 
+- (NSInteger)wordStopIndexWithString:(NSString *)aString
+                      wordStartIndex:(NSInteger)startIndex {
+    if (!aString
+        || (startIndex > [aString length] - 1)) {
+        return 0;
+    }
+
+    NSInteger stopIndex = startIndex;
+    // advance stopIndex to end of the word
+    // stopIndex is before last character in string
+    // and character after stopIndex isn't a separator
+    while ((stopIndex < [aString length] - 1)
+           && ![self.separators characterIsMember:[aString characterAtIndex:stopIndex + 1]]) {
+        stopIndex++;
+    }
+    return stopIndex;
+}
+
+- (NSInteger)wordEndIndexFromString:(NSString *)aString
+                         startIndex:(NSInteger)startIndex {
+
+    NSString *spaceCharAsString = @" ";
+
+    // TODO: handle startIndex is space
+
+    for (NSInteger index = startIndex; index < [aString length]; ++index) {
+        
+        if (index == [aString length] - 1) {
+            // index is at end of string
+            return index;
+        }
+
+        NSString *charAtIndexAsString = [aString
+                                         substringWithRange:NSMakeRange(index, 1)];
+        if ([charAtIndexAsString isEqualToString:spaceCharAsString]) {
+            if (index == startIndex) {
+                return index;
+            } else {
+                return index - 1;
+            }
+        }
+    }
+    // shouldn't get here
+    NSInteger errorCode = -1;
+    return errorCode;
+}
+
 - (NSString*)stringByReversingString:(NSString *)aString {
     if (!aString || (1 >= [aString length])) {
         return aString;
@@ -116,23 +163,6 @@
         myString = [myString stringByAppendingString:[self stringByReversingString:word]];
     }
     return myString;
-}
-
-- (NSInteger)wordStopIndexWithString:(NSString *)aString wordStartIndex:(NSInteger)startIndex {
-    if (!aString
-        || (startIndex > [aString length] - 1)) {
-        return 0;
-    }
-
-    NSInteger stopIndex = startIndex;
-    // advance stopIndex to end of the word
-    // stopIndex is before last character in string
-    // and character after stopIndex isn't a separator
-    while ((stopIndex < [aString length] - 1)
-           && ![self.separators characterIsMember:[aString characterAtIndex:stopIndex + 1]]) {
-        stopIndex++;
-    }
-    return stopIndex;
 }
 
 - (NSString *)stringByReversingWordsInString:(NSString *)aString {

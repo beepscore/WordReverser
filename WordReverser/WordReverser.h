@@ -20,7 +20,12 @@
 
 - (BOOL)isLastCharSeparator:(NSString *)aString;
 
-- (NSInteger)wordStopIndexWithString:(NSString *)aString wordStartIndex:(NSInteger)startIndex;
+// TODO: Consider delete this, use wordEndIndexFromString:startIndex instead
+- (NSInteger)wordStopIndexWithString:(NSString *)aString
+                      wordStartIndex:(NSInteger)startIndex;
+
+- (NSInteger)wordEndIndexFromString:(NSString *)aString
+                         startIndex:(NSInteger)startIndex;
 
 /**
  stringByReversingString reverses in place
