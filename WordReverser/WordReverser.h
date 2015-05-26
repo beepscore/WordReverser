@@ -18,6 +18,8 @@
 
 - (NSMutableArray*)arrayFromCharacterSet:(NSCharacterSet *)characterSet;
 
+- (NSString *)lastCharAsString:(NSString *)aString;
+
 - (BOOL)isLastCharSeparator:(NSString *)aString;
 
 // TODO: Consider delete this, use wordEndIndexFromString:startIndex instead

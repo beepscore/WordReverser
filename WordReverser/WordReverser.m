@@ -46,6 +46,15 @@ NSString *kSpaceCharAsString = @" ";
     return array;
 }
 
+- (NSString *)lastCharAsString:(NSString *)aString {
+    if (!aString
+        || (0 == [aString length])) {
+        return @"";
+    }
+    NSString *lastCharAsString = [aString substringFromIndex:[aString length] - 1];
+    return lastCharAsString;
+}
+
 - (BOOL)isLastCharSeparator:(NSString *)aString {
     if (!aString || (0 == [aString length])) {
         return NO;

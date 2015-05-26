@@ -53,6 +53,17 @@
     XCTAssertTrue([separatorsArray containsObject:@" "]);
 }
 
+- (void)testLastCharAsString {
+    NSString* aString = @"";
+    XCTAssertEqualObjects(aString, [self.wordReverser lastCharAsString:aString]);
+    aString = @"a";
+    XCTAssertEqualObjects(aString, [self.wordReverser lastCharAsString:aString]);
+    aString = @".";
+    XCTAssertEqualObjects(aString, [self.wordReverser lastCharAsString:aString]);
+    XCTAssertEqualObjects(@" ", [self.wordReverser lastCharAsString:@"a "]);
+    XCTAssertEqualObjects(@"b", [self.wordReverser lastCharAsString:@" b"]);
+}
+
 - (void)testIsLastCharSeparatorFalse {
     XCTAssertFalse([self.wordReverser isLastCharSeparator:nil]);
     XCTAssertFalse([self.wordReverser isLastCharSeparator:@""]);
