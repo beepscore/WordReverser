@@ -160,6 +160,9 @@
     aString = @"m.";
     XCTAssertEqualObjects(@"m.",
                           [self.wordReverser stringByReversingStringExceptEndingSeparator:aString]);
+    aString = @"you";
+    XCTAssertEqualObjects(@"uoy",
+                          [self.wordReverser stringByReversingStringExceptEndingSeparator:aString]);
     aString = @"you.";
     XCTAssertEqualObjects(@"uoy.",
                           [self.wordReverser stringByReversingStringExceptEndingSeparator:aString]);
