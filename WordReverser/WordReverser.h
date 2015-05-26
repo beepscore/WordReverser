@@ -36,8 +36,6 @@
 - (NSString*)stringByReversingString:(NSString *)aString;
 
 - (NSString *)stringByReversingStringExceptEndingSeparator:(NSString *)aString;
-    
-- (NSString *)reverseWordsStripPunctuationInString:(NSString *)aString;
 
 /**
  @return words in original order, each word's letters are reversed.
@@ -48,5 +46,10 @@
  @return words in reverse order, each word's letters are not reversed.
  */
 - (NSString *)stringByReversingWordOrder:(NSString *)aString;
+
+/**
+ @return words in reverse order, each word's letters are not reversed.
+ */
+- (NSString *)reverseWords:(NSString *)aString;
 
 @end

@@ -189,20 +189,23 @@ NSString *kSpaceCharAsString = @" ";
     return workingString;
 }
 
-// TODO: Consider delete or comment out unneeded method
-- (NSString *)reverseWordsStripPunctuationInString:(NSString *)aString {
+- (NSString *)reverseWords:(NSString *)aString {
     if (!aString || (1 >= [aString length])) {
         return aString;
     }
-    
+
+    NSString *reversedString = [self stringByReversingStringExceptEndingSeparator:aString];
     NSString *myString = @"";
 
-    // split string into an array of words, discarding separators.
-    NSArray *words = [aString componentsSeparatedByCharactersInSet:self.separators];
+    // split reversed string into an array of reversed words
+    NSArray *words = [reversedString componentsSeparatedByString:kSpaceCharAsString];
     
     for (NSString* word in words) {
         myString = [myString stringByAppendingString:[self stringByReversingString:word]];
+        myString = [myString stringByAppendingString:kSpaceCharAsString];
     }
+    // remove extra space appended to end
+    myString = [myString substringToIndex:[myString length] - 1];
     return myString;
 }
 

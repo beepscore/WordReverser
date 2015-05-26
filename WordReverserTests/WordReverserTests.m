@@ -80,10 +80,37 @@
     XCTAssertTrue([self.wordReverser isLastCharSeparator:@"g!a;"]);
 }
 
-- (void)testReverseWordsStripPunctuationInString {
-    NSString* aString = @"This is a good problem.";
-    XCTAssertEqualObjects(@"sihTsiadoogmelborp",
-                          [self.wordReverser reverseWordsStripPunctuationInString:aString]);
+- (void)testReverseWordsReturnsSameString {
+    NSString* aString = nil;
+    XCTAssertNil([self.wordReverser reverseWords:aString]);
+
+    aString = @"";
+    XCTAssertEqualObjects(aString,
+                          [self.wordReverser reverseWords:aString]);
+    aString = @"m";
+    XCTAssertEqualObjects(aString,
+                          [self.wordReverser reverseWords:aString]);
+    aString = @"you";
+    XCTAssertEqualObjects(aString,
+                          [self.wordReverser reverseWords:aString]);
+    aString = @".";
+    XCTAssertEqualObjects(aString,
+                          [self.wordReverser reverseWords:aString]);
+}
+
+- (void)testReverseWords {
+    XCTAssertEqualObjects(@"b a", [self.wordReverser
+                                   reverseWords:@"a b"]);
+    XCTAssertEqualObjects(@".m",
+                          [self.wordReverser reverseWords:@"m."]);
+    XCTAssertEqualObjects(@".you",
+                          [self.wordReverser reverseWords:@"you."]);
+    XCTAssertEqualObjects(@"problem good a is .This",
+                          [self.wordReverser reverseWords:@"This is a good problem."]);
+    XCTAssertEqualObjects(@"happy so- am !I",
+                          [self.wordReverser reverseWords:@"I am so- happy!"]);
+    XCTAssertEqualObjects(@"am I Therefore- think. !I",
+                          [self.wordReverser reverseWords:@"I think. Therefore- I am!"]);
 }
 
 - (void)testWordStopIndexWithStringWordStartIndex {
