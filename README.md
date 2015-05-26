@@ -1,7 +1,7 @@
 # Purpose
 Write app to reverse words within a string.
 
-# Reuslts
+# Results
 
 ## Assumptions
 Note "reverse words within a string" is ambiguous.
