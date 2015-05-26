@@ -174,4 +174,39 @@
                           [self.wordReverser stringByReversingStringExceptEndingSeparator:aString]);
 }
 
+- (void)testStringByReversingWordOrderReturnsSameString {
+    NSString* aString = nil;
+    XCTAssertNil([self.wordReverser stringByReversingWordOrder:aString]);
+
+    aString = @"";
+    XCTAssertEqualObjects(aString,
+                          [self.wordReverser stringByReversingWordOrder:aString]);
+    aString = @"m";
+    XCTAssertEqualObjects(aString,
+                          [self.wordReverser stringByReversingWordOrder:aString]);
+    aString = @"you";
+    XCTAssertEqualObjects(aString,
+                          [self.wordReverser stringByReversingWordOrder:aString]);
+    aString = @".";
+    XCTAssertEqualObjects(aString,
+                          [self.wordReverser stringByReversingWordOrder:aString]);
+    aString = @"m.";
+    XCTAssertEqualObjects(aString,
+                          [self.wordReverser stringByReversingWordOrder:aString]);
+    aString = @"you.";
+    XCTAssertEqualObjects(aString,
+                          [self.wordReverser stringByReversingWordOrder:aString]);
+}
+
+- (void)testStringByReversingWordOrder {
+    XCTAssertEqualObjects(@"b a", [self.wordReverser
+                                   stringByReversingWordOrder:@"a b"]);
+    XCTAssertEqualObjects(@"problem good a is This.",
+                          [self.wordReverser stringByReversingWordOrder:@"This is a good problem."]);
+    XCTAssertEqualObjects(@"happy so- am I!",
+                          [self.wordReverser stringByReversingWordOrder:@"I am so- happy!"]);
+    XCTAssertEqualObjects(@"am I Therefore- think. I!",
+                          [self.wordReverser stringByReversingWordOrder:@"I think. Therefore- I am!"]);
+}
+
 @end

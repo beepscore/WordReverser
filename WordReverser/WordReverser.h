@@ -41,4 +41,6 @@
 
 - (NSString *)stringByReversingWordsInString:(NSString *)aString;
 
+- (NSString *)stringByReversingWordOrder:(NSString *)aString;
+
 @end

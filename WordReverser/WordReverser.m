@@ -159,6 +159,37 @@ NSString *kSpaceCharAsString = @" ";
     }
 }
 
+- (NSString *)stringByReversingWordOrder:(NSString *)aString {
+    
+    if (!aString || (1 >= [aString length])) {
+        return aString;
+    }
+
+    NSString *workingString = [self stringByReversingStringExceptEndingSeparator:aString];
+
+    NSInteger endIndex = 0;
+    
+    for (NSInteger startIndex = 0; startIndex < [workingString length]; ++startIndex) {
+        
+        endIndex = [self wordEndIndexFromString:workingString startIndex:startIndex];
+        NSRange wordRange = NSMakeRange(startIndex, (endIndex - startIndex) + 1);
+        if ((endIndex == [workingString length] - 1)
+            && [self isLastCharSeparator:workingString]) {
+            // don't reverse ending separator
+            wordRange = NSMakeRange(startIndex, (endIndex - startIndex));
+        }
+        NSString *reversedWord = [workingString substringWithRange:wordRange];
+        NSString *forwardWord = [self stringByReversingString:reversedWord];
+
+        workingString = [workingString stringByReplacingCharactersInRange:wordRange
+                                                      withString:forwardWord];
+        // startIndex will be incremented by loop too
+        startIndex = endIndex;
+    }
+    return workingString;
+}
+
+// TODO: Consider delete or comment out unneeded method
 - (NSString *)reverseWordsStripPunctuationInString:(NSString *)aString {
     if (!aString || (1 >= [aString length])) {
         return aString;

@@ -23,3 +23,6 @@ Leave ending punctuation in place.
 Then iterate through reversed words using space as separators.
 Reverse each word but keep word order.
 "happy so- am I!"
+
+## TODO
+Consider reversing sentence by sentence and keeping punctuation at end of each sentence.
