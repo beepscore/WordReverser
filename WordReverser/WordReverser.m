@@ -12,7 +12,7 @@
 
 NSString *kSpaceCharAsString = @" ";
 
-- (id)init {
+- (instancetype)init {
     self = [super init];
     if (self) {
         // https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/Strings/Articles/CharacterSets.html#//apple_ref/doc/uid/20000153-74241
